@@ -96,9 +96,8 @@ public class SceneSwitcher
 
     public static void FocusSceneBtn()
     {
-        var tex = EditorGUIUtility.IconContent(@"UnityEditor.SceneView").image;
         GUI.changed = false;
-        GUILayout.Toggle(_sceneFocus, new GUIContent(null, tex), "Command");
+        GUILayout.Toggle(_sceneFocus, new GUIContent("Lock"), ToolbarStyles.commandButtonStyle);
         if (GUI.changed)
         {
             _sceneFocus = !_sceneFocus;
